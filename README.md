@@ -4,7 +4,7 @@
 
 密码功能是通过在文本文件中添加一个头部行来实现的，该行在便签中不显示。请注意，这并不会加密内容，只是限制访问权限。服务器的唯一要求是启用了 mod_rewrite 的 Apache Web 服务器或启用了 ngx_http_rewrite_module 和 PHP 的 nginx Web 服务器。
 
-![编辑界面截图](https://raw.github.com/domOrielton/minimal-web-notepad/screenshots/mn_edit.png)
+![编辑界面截图](https://raw.githubusercontent.com/VMCoud/minimal-web-notepad/master/image/Screenshot_20230725_001749.png)
 
 对 pereorga 的原始版本添加了以下功能：
 - 可以在便签中显示超链接的查看选项（在移动设备上非常有用）
@@ -21,36 +21,36 @@
 
 截图：
 **便签查看模式**
-![查看界面截图](https://raw.github.com/domOrielton/minimal-web-notepad/screenshots/mn_view.png)
+![查看界面截图](https://raw.githubusercontent.com/VMCoud/minimal-web-notepad/master/image/Screenshot_20230725_001758.png)
 
 **适配移动设备的响应式菜单**
-![移动菜单截图](https://raw.github.com/domOrielton/minimal-web-notepad/screenshots/mn_mobile_menu_expanded.png)
-![移动菜单截图](https://raw.github.com/domOrielton/minimal-web-notepad/screenshots/mn_mobile_menu.png)
+![移动菜单截图](https://raw.githubusercontent.com/VMCoud/minimal-web-notepad/master/image/Screenshot_20230725_003719.png)
+![移动菜单截图](https://raw.githubusercontent.com/VMCoud/minimal-web-notepad/master/image/Screenshot_20230725_003659.png)
 
 **等宽字体**
-![等宽字体截图](https://raw.github.com/domOrielton/minimal-web-notepad/screenshots/mn_mono.png)
+![等宽字体截图](https://raw.githubusercontent.com/VMCoud/minimal-web-notepad/master/image/Screenshot_20230725_001901.png)
 
 **密码保护**
-![密码保护截图](https://raw.github.com/domOrielton/minimal-web-notepad/screenshots/mn_password.png)
+![密码保护截图](https://raw.githubusercontent.com/VMCoud/minimal-web-notepad/master/image/Screenshot_20230725_001922.png)
 
 **受保护便签的密码提示**
-![密码提示截图](https://raw.github.com/domOrielton/minimal-web-notepad/screenshots/mn_password_prompt.png)
+![密码提示截图](https://raw.githubusercontent.com/VMCoud/minimal-web-notepad/master/image/Screenshot_20230725_002013.png)
 
 “以只读模式查看”链接仅显示便签文本，不显示其他内容
 
 **复制到剪贴板的链接**
-![复制截图](https://raw.github.com/domOrielton/minimal-web-notepad/screenshots/mn_copy.png)
+![复制截图](https://raw.githubusercontent.com/VMCoud/minimal-web-notepad/master/image/Screenshot_20230725_002105.png)
 
 **便签列表**
 - 通常仅用于非公开的 URL，尽管页面是受密码保护的
-![便签列表截图](https://raw.github.com/domOrielton/minimal-web-notepad/screenshots/mn_notelist.png)
+![便签列表截图](https://raw.githubusercontent.com/VMCoud/minimal-web-notepad/master/image/Screenshot_20230725_002159.png)
 
 如果不想显示便签列表，可以在 index.php 文件顶部将 $allow_noteslist 参数设置为 false，或者将 `notelist.php` 重命名为其他名称。便签列表页面的密码位于 `notelist.php` 文件的顶部，可以使用 `Protect\with('modules/protect_form.php','在这里更改密码')` 进行修改。
 
 **备选编辑视图**
 还有一种备选的编辑视图，可以在便签后添加 `?simple` 来访问，例如 /quick?simple。我个人觉得这个视图非常适合在手机上快速添加便签，它在页面顶部有一个较小的编辑区域，当你输入文本并按下回车键时，它会将文本添加到便签中，并将其移动到占据页面剩余部分的视图中。此视图部分将 URL 显示为可点击的链接。您不能在此视图上设置密码，但它会遵循已有的密码。
 
-![复制截图](https://raw.github.com/domOrielton/minimal-web-notepad/screenshots/mn_simple.png)
+![复制截图](https://raw.githubusercontent.com/VMCoud/minimal-web-notepad/master/image/Screenshot_20230725_002735.png)
 
 安装：
 只要启用了 mod_rewrite 并且 Web 服务器被允许写入 `_notes` 数据目录，就不需要进行任何配置。这个数据目录在 `config.php` 文件中设置，所以如果你想要将其更改为原始 pereorga/minimalist-web-notepad 版本使用的文件夹，请在那里进行修改。所有的便签都以文本文件的形式存储，所以运行 Apache（或 Nginx）的服务器应该就足够了，不需要使用数据库。如果便签无法保存，请检查 `_notes` 目录的权限，通常 0755 或 744 就足够了。
