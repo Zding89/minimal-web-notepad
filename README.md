@@ -17,7 +17,7 @@
 - 显示可用的便签列表
 - 可以根据需要打开或关闭功能以减小页面大小
 
-可以在 http://note.rf.gd/ 或 http://note.rf.gd/some-note-name-here 上查看演示。由于演示没有启用 HTTPS，所以浏览器中会显示密码警告，请仅用于测试，不要用于其他用途。
+可以在 汉化版：https://7t.vc 或原版 http://note.rf.gd/ 或 http://note.rf.gd/some-note-name-here 上查看演示。由于演示没有启用 HTTPS，所以浏览器中会显示密码警告，请仅用于测试，不要用于其他用途。
 
 截图：
 **便签查看模式**
