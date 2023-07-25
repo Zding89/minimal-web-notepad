@@ -9,7 +9,11 @@
 			transform: translate(-50%, -50%);
 			width: 80%;
 			max-width: 300px;
-			height: 26%;
+        <?php if($allowReadOnlyView == 1): ?>
+            <?php echo 'height: 220px;' ?>	
+        <?php else: ?>
+            <?php echo 'height: 190px;' ?>	
+        <?php endif; ?>
 			margin: 0 auto;
 			font-family: sans-serif;
 			font-size: large;
