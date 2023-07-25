@@ -29,9 +29,9 @@ Protect\with('modules/protect_form.php','Admin');
 
         $difference = round($difference);
 
-        if ($difference != 1) {
-            $periods[$j] .= "s";
-        }
+       // if ($difference != 1) {
+       //    $periods[$j] .= "s";
+       // }
 
         return "$difference$periods[$j]$tense";
     }
