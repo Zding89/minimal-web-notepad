@@ -15,7 +15,8 @@ header('Expires: 0');
 if (!isset($_GET['note']) || !preg_match('/^([a-zA-Z0-9]+(-[a-zA-Z0-9]+)*)$/', $_GET['note'])) {
 
     // Generate a name with 5 random unambiguous characters. Redirect to it.
-    header("Location: $base_url/" . substr(str_shuffle('2345679abcdefghjkmnpqrstwxyz'), -5));
+    //header("Location: $base_url/" . substr(str_shuffle('2345679abcdefghjkmnpqrstwxyz'), -5));
+    header("Location: https://fc216690.web-notepad.pages.dev/" . substr(str_shuffle('2345679abcdefghjkmnpqrstwxyz'), -5));
     die;
 }
 
